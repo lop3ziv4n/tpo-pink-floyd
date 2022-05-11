@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@font-face {
+  font-family: 'Floyd';
+  src: url("../fonts/Floyd.ttf")
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-gold: rgb(219, 144, .5);
+  --color-gold-light: rgb(219, 161, 54);
+  --color-gray: rgb(88, 88, 88);
+  --background: rgba(0, 0, 0, 0.9);
+  --title: 65px;
+  --subtitle: 20px;
+  --margin: 60px;
+  --spaces: 10px;
+  --spaces-content: 45px;
+  --color_shadow: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: var(--background);
+}
+
+header {
+  width: 100%;
+  height: 650px;
+  background: linear-gradient(to bottom right,
+      rgba(255, 255, 255, 0.5),
+      rgba(0, 0, 0, 0.5)), url(../images/pink-floyd-background-home.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.nav {
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  height: 80px;
+  color: #fff;
+  box-shadow: 0 0 10px 0 var(--color_shadow)
+}
+
+.nav-main {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  justify-content: end;
+  align-items: center;
+  height: inherit;
+}
+
+nav .nav-links a {
+  display: inline-block;
+  padding: 5px 0;
+  margin-right: 17px;
+  font-size: 17px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+}
+
+nav .nav-links a:hover {
+  border-bottom: 3px solid var(--color-gold);
+  transition: 0.6s;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+  padding: var(--margin) 0;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.container-title {
+  font-size: var(--title);
+  font-family: 'Floyd';
+  color: var(--color-gold);
+  font-weight: bolder;
+  margin-bottom: var(--spaces);
+}
+
+.container-subtitle {
+  font-size: var(--subtitle);
+  color: var(--color-gold-light);
+}
+
+.line::after {
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: var(--spaces);
+  width: 100px;
+  height: 2px;
+  background: var(--color-gold-light);
+  margin-bottom: var(--spaces-content);
+}
+
+.container-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 45%;
+  padding: 30px 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 60px;
+  box-shadow: 0 0 6px var(--color_shadow);
+  transform: scale(1);
+  transition: transform 0.6s;
+}
+
+.card:hover {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.card-img {
+  width: 90%;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.cards-text {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card-list {
+  color: var(--color-gold);
+  font-weight: 700;
+  margin: 25px 0 12px;
+  font-size: 20px;
+}
+
+.card-title {
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.card-copy {
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.card-date {
+  color: var(--color-gold-light);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.divider-history {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to bottom right,
+      rgba(255, 255, 255, 0.5),
+      rgba(0, 0, 0, 0.5)), url(../images/pink-floyd-background-history.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.divider-album {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to bottom right,
+      rgba(255, 255, 255, 0.5),
+      rgba(0, 0, 0, 0.5)), url(../images/pink-floyd-background-album.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.divider-store {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to bottom right,
+      rgba(255, 255, 255, 0.5),
+      rgba(0, 0, 0, 0.5)), url(../images/pink-floyd-background-store.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 20px 10px;
+}
+
+.input::placeholder {
+  color: #fff;
+  font-family: 'raleway', 'sans-serif';
+}
+
+input[name="name"],
+input[name="email"],
+input[name="phone"] {
+  display: inline-block;
+  width: 49%;
+  margin-bottom: 30px;
+}
+
+.form select {
+  display: inline-block;
+  width: 49%;
+  margin-bottom: 30px;
+}
+
+.form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input[type="submit"] {
+  width: 120px;
+  text-align: center;
+  padding: 14px 0;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  color: var(--color-gold);
+  background: #fff;
+}
+
+footer {
+  padding: 60px 0 30px 0;
+  margin: auto;
+  overflow: hidden;
+  background: url(../images/keyboard-backgound-contact.jpg);
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+  font-size: 60px;
+  color: #FFF;
+}
