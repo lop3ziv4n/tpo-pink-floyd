@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/pink-floyd-logo-red.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/pink-floyd-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <title>Pink Floyd</title>
 </head>
 <body>
     <header>
-        <nav class="nav">
+        <nav class="nav-transparent" id="nav">
             <div class="nav-main">
-                <div class="nav-links">
-                    <a href="index.html" class="nav-links">Inicio</a>
-                    <a href="#history" class="nav-links">Historia</a>
-                    <a href="#philosophy" class="nav-links">Filosofía</a>
-                    <a href="#discography" class="nav-links">Discografía</a>
-                    <a href="#store" class="nav-links">Tienda</a>
-                    <a href="#contact" class="nav-links">Contacto</a>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Inicio</a>
+                    <a href="#history">Historia</a>
+                    <a href="#philosophy">Filosofía</a>
+                    <a href="#discography">Discografía</a>
+                    <a href="#store">Tienda</a>
+                    <a href="#contact">Contacto</a>
                 </div>
-            </div>
+                <div class="nav-menu" id="navMenu">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>           
         </nav>
         <div class="logo-img">
             <img src="./images/pink-floyd-logo-black.png" alt="Pink Floyd Logo"> 
-        </div>
+        </div>        
     </header>
 
     <main>
@@ -599,21 +602,22 @@
 
         <section class="container" id="store">
             <h2 class="container-title">Tienda</h2>
-            <p class="container-subtitle line">(Complete el formulario para que un vendedor se comunique con usted)</p>
+            <p class="container-subtitle line">(Complete el formulario para que un vendedor se comunique con usted a la brevedad)</p>
 
             <form action="" class="form" name="contactForm" onsubmit="return valid_send()">
                 <input class="input" type="text" name="name" placeholder="Nombre">
                 <input class="input" type="email" name="email" placeholder="Email">
                 <input class="input" type="number" name="phone" placeholder="Telefono">
-                <select class="input" name=type-item>
-                    <option selected value="vinyls">Vinilos
+                <select class="input" name=item>
+                    <option selected value="">Seleccione un Item de Compra
+                    <option value="vinyls">Vinilos
                     <option value="t-shirts">Remeras
                     <option value="posters">Posters
                     <option value="cup">Tazas
                     <option value="keychains">Llaveros
                     <option value="others">Otros
                 </select>
-                <textarea class="input" name="message" cols="30" rows="8" placeholder="Mensaje"></textarea>
+                <textarea class="input" name="message" cols="30" rows="8" placeholder="Comentarios"></textarea>
                 <input class="input" type="submit" value="Enviar">
             </form>            
         </section>        
@@ -650,6 +654,7 @@
         </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/store.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
