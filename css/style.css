@@ -101,7 +101,7 @@ nav .nav-links a:hover {
 }
 
 .logo-img img {
-  width: 80%;
+  width: 95%;
   height: 80%;
 }
 
@@ -306,6 +306,10 @@ footer {
 
 @media screen and (max-width: 1000px) {
 
+  .logo-img img {
+    height: 75%;
+  }
+
   .nav-menu {
     display: block;
   }
@@ -349,24 +353,18 @@ footer {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
 
-  header {
-    height: 550px;
+  .container-title {
+    font-size: 55px;
+  }
+
+  .container-subtitle{
+    font-size: 15px;
   }
 
   .logo-img img {
-    width: 70%;
-    height: 70%;
-  }
-
-}
-
-@media screen and (max-width: 600px) {
-
-  .logo-img img {
-    width: 60%;
-    height: 60%;
+    height: 55%;
   }
 
   .card {
