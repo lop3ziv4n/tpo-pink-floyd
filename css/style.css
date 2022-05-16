@@ -18,6 +18,8 @@
   --color-gold-light: rgb(219, 161, 54);
   --color-gray: rgb(88, 88, 88);
   --background: rgba(0, 0, 0, 0.9);
+  --background-solid: rgba(0, 0, 0);
+  --background-transparent: rgba(0, 0, 0, 0.2);
   --title: 65px;
   --subtitle: 20px;
   --margin: 60px;
@@ -49,13 +51,13 @@ nav {
 }
 
 .nav-transparent {
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--background-transparent);
   height: 65px;
   color: #fff;
 }
 
 .nav-solid {
-  background: var(--background);
+  background: var(--background-solid);
   height: 75px;
   color: #fff;
 }
@@ -101,7 +103,7 @@ nav .nav-links a:hover {
 }
 
 .logo-img img {
-  width: 95%;
+  width: 90%;
   height: 80%;
 }
 
@@ -158,9 +160,9 @@ nav .nav-links a:hover {
 }
 
 .card:hover {
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-  transform: scale(1.03);
-  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1.09);
+  cursor: zoom-in;
 }
 
 .card-img {
@@ -190,7 +192,7 @@ nav .nav-links a:hover {
 
 .card-copy {
   color: #fff;
-  font-size: 12px;
+  font-size: 15px;
   margin-bottom: 16px;
 }
 
@@ -277,12 +279,26 @@ input[type="submit"] {
   width: 120px;
   text-align: center;
   padding: 14px 0;
+  position: relative;
+  animation-name: input_move;
+  animation-timing-function: ease;
+  animation-duration: 5s;
 }
 
 input[type="submit"]:hover {
   cursor: pointer;
   color: var(--color-gold);
   background: #fff;
+}
+
+@keyframes input_move {
+  from {
+    left: 600px;
+  }
+
+  to {
+    left: 0px;
+  }
 }
 
 footer {
@@ -302,10 +318,15 @@ footer {
 .icon {
   font-size: 60px;
   color: #FFF;
+  transition: transform 2s;
+}
+
+.icon:hover {
+  color: var(--color-gold);
+  transform: rotate(360deg);
 }
 
 @media screen and (max-width: 1000px) {
-
   .logo-img img {
     height: 75%;
   }
@@ -345,6 +366,7 @@ footer {
 
   .card:hover {
     transform: none;
+    cursor: default;
   }
 
   footer {
@@ -354,12 +376,11 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-
   .container-title {
     font-size: 55px;
   }
 
-  .container-subtitle{
+  .container-subtitle {
     font-size: 15px;
   }
 
